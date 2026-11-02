@@ -105,7 +105,21 @@ npm run cleanup -- <directory> --older-than <days> [--confirm]
 
 > **Увага:** команда Cleanup з прапорцем `--confirm` видаляє файли без можливості відновлення засобами цього застосунку. Перед видаленням перевірте список знайдених файлів.
 
-## Архітектура та технічні особливості
+### Структура проєкту
+
+file-organizer/
+├── lib/
+│   ├── scanner.js
+│   ├── duplicates.js
+│   ├── organizer.js
+│   ├── cleanup.js
+│   └── utils.js
+├── file-organizer.js
+├── package.json
+├── README.md
+└── .gitignore
+
+## Tехнічні особливості
 
 Проєкт побудований на модульному підході: логіка сканування, пошуку дублікатів, сортування та очищення винесена в окремі модулі.
 
@@ -114,6 +128,16 @@ npm run cleanup -- <directory> --older-than <days> [--confirm]
 - **SHA-256** використовується для перевірки вмісту файлів під час пошуку дублікатів.
 - **Async/Await** забезпечує асинхронну роботу з файловою системою.
 - **Error Handling** забезпечує обробку типових файлових помилок та виведення зрозумілих повідомлень.
+
+### Аргументи команд
+
+| Аргумент | Опис |
+|---|---|
+| `<directory>` | Директорія, яку потрібно обробити |
+| `--output <directory>` | Директорія для збереження впорядкованих файлів |
+| `--older-than <days>` | Вік файлів у днях для пошуку на очищення |
+| `--confirm` | Підтверджує фактичне видалення файлів |
+| `--help` | Показує довідку з командами |
 
 ### Чого я навчилася
 
@@ -225,7 +249,21 @@ npm run cleanup -- <directory> --older-than <days> [--confirm]
 
 > **Warning:** Cleanup with the `--confirm` flag permanently deletes matching files. Review the file list carefully before confirming deletion.
 
-## Architecture & Technical Highlights
+### Project structure
+
+file-organizer/
+├── lib/
+│   ├── scanner.js
+│   ├── duplicates.js
+│   ├── organizer.js
+│   ├── cleanup.js
+│   └── utils.js
+├── file-organizer.js
+├── package.json
+├── README.md
+└── .gitignore
+
+## Technical Highlights
 
 The project follows a modular architecture, with scanning, duplicate detection, organization, and cleanup logic separated into dedicated modules.
 
@@ -234,6 +272,16 @@ The project follows a modular architecture, with scanning, duplicate detection, 
 - **SHA-256** is used to compare file contents when detecting duplicates.
 - **Async/Await** handles asynchronous file system operations.
 - **Error Handling** provides handling for common file system errors and user-friendly error messages.
+
+### Arguments of teams
+
+| Argument | Description |
+|---|---|
+| `<directory>` |Directory to be processed |
+| `--output <directory>` | Directory to save ordered files |
+| `--older-than <days>` | Age of files in days to search for cleaning |
+| `--confirm` | Confirms the actual deletion of files |
+| `--help` | Shows help with commands |
 
 ### What I Learned
 
