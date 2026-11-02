@@ -88,19 +88,19 @@ npm run duplicates <directory>
 ### Organize
 
 ```bash
-npm run organize <directory> --output <target>
+npm run organize -- <directory> --output <target>
 ```
 
 ### Cleanup — попередній перегляд
 
 ```bash
-npm run cleanup <directory> --older-than <days>
+npm run cleanup -- <directory> --older-than <days>
 ```
 
 ### Cleanup — підтверджене видалення
 
 ```bash
-npm run cleanup <directory> --older-than <days> [--confirm]
+npm run cleanup -- <directory> --older-than <days> [--confirm]
 ```
 
 > **Увага:** команда Cleanup з прапорцем `--confirm` видаляє файли без можливості відновлення засобами цього застосунку. Перед видаленням перевірте список знайдених файлів.
@@ -208,19 +208,19 @@ npm run duplicates <directory>
 ### Organize
 
 ```bash
-npm run organize <directory> --output <target>
+npm run organize -- <directory> --output <target>
 ```
 
 ### Cleanup — Dry Run
 
 ```bash
-npm run cleanup <directory> --older-than <days> 
+npm run cleanup -- <directory> --older-than <days> 
 ```
 
 ### Cleanup — Confirmed Deletion
 
 ```bash
-npm run cleanup <directory> --older-than <days> [--confirm]
+npm run cleanup -- <directory> --older-than <days> [--confirm]
 ```
 
 > **Warning:** Cleanup with the `--confirm` flag permanently deletes matching files. Review the file list carefully before confirming deletion.

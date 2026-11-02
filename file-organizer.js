@@ -13,7 +13,7 @@ file-organizer — CLI tool for taming your Downloads folder
 Usage:
   node file-organizer.js scan <directory>
   node file-organizer.js duplicates <directory>
-  node file-organizer.js organize <directory> --output <target>
+  node file-organizer.js organize -- <directory> --output <target>
   node file-organizer.js cleanup <directory> --older-than <days> [--confirm]
 
 Options:
